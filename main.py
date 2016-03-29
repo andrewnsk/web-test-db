@@ -3,6 +3,7 @@ from flask import request
 from flask import render_template
 from logic import validate_login
 from logic import log_the_user_in
+
 import logging
 
 logging.basicConfig(level=logging.DEBUG,
@@ -14,8 +15,10 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def main_page():
-    return "index page"
+def index():
+    error = None
+    logging.debug('rendering index page')
+    return render_template('index.html', error=error)
 
 
 @app.route('/view')
@@ -39,9 +42,9 @@ def login():
     error = None
     if request.method == 'POST':
         logging.debug('method post')
-        if validate_login(request.form['mail'], request.form['password']):
+        if validate_login(request.form['username'], request.form['password']):
             logging.debug('post ok')
-            return log_the_user_in(request.form['mail'])
+            return log_the_user_in(request.form['username'])
         else:
             logging.debug('post error')
             error = 'Invalid username/password'
@@ -49,6 +52,12 @@ def login():
     # was GET or the credentials were invalid
     logging.debug('return login')
     return render_template('login.html', error=error)
+
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html'), 404
+
 
 if __name__ == '__main__':
     logging.debug('running application')

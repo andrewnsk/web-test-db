@@ -1,4 +1,6 @@
 import logging
+from flask import url_for
+from flask import redirect
 
 
 logging.basicConfig(level=logging.DEBUG,
@@ -6,11 +8,11 @@ logging.basicConfig(level=logging.DEBUG,
                     filename='system.log')
 
 
-def validate_login():
+def validate_login(username, password):
     logging.debug('validate login')
-    return False
+    return True
 
 
-def log_the_user_in():
+def log_the_user_in(username):
     logging.debug('log the user in')
-    return False
+    return redirect(url_for('index'))
