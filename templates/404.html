@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>404</title>
-</head>
+{% include "head.html" ignore missing %}
+
 <body>
-Нет такой страницы!
+
+<div class="container">
+
+{% include "navbar.html" ignore missing %}
+
+    <div class="col-sm-12">
+
+    <div class="alert alert-danger" role="alert">
+        Эта страница удалена или еще не создана.
+        Вернитесь на главную, и попробуйте заново
+        либо воспользуйтесь поиском.
+    </div>
+    </div>
+</div>
 </body>
 </html>
