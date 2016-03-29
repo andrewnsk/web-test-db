@@ -32,6 +32,11 @@ def show_post(post_id):
     return 'Post %d' % post_id
 
 
+@app.route('/sendmessage', methods=['POST', 'GET'])
+def send_message():
+    return 'ok'
+
+
 @app.route('/about')
 def about():
     return 'The about page'
