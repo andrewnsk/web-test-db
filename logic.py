@@ -16,3 +16,8 @@ def validate_login(username, password):
 def log_the_user_in(username):
     logging.debug('log the user in')
     return redirect(url_for('index'))
+
+
+def handle_message(name, email, message):
+    logging.debug(name + " " + email + " " + message)
+    return True
