@@ -3,6 +3,7 @@ from flask import request
 from flask import render_template
 from logic import validate_login
 from logic import log_the_user_in
+from logic import handle_message
 
 import logging
 
@@ -34,7 +35,17 @@ def show_post(post_id):
 
 @app.route('/sendmessage', methods=['POST', 'GET'])
 def send_message():
-    return 'ok'
+
+    if request.method == 'POST':
+        logging.debug('sendmessage method post')
+        if handle_message(request.form['name'], request.form['email'], request.form['message']):
+            logging.debug('post ok')
+            return 'ok'
+        else:
+            logging.debug('post error')
+    logging.debug('pass')
+
+    return 'not ok'
 
 
 @app.route('/about')
