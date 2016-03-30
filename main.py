@@ -19,7 +19,7 @@ app = Flask(__name__)
 def index():
     error = None
     logging.debug('rendering index page')
-    return render_template('index.html', error=error)
+    return render_template('index.html')
 
 
 @app.route('/view')
@@ -50,7 +50,7 @@ def send_message():
 
 @app.route('/about')
 def about():
-    return 'The about page'
+    return render_template('about.html')
 
 
 @app.route('/login', methods=['POST', 'GET'])
