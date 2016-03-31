@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.DEBUG,
 
 
 def validate_login(username, password):
-    logging.debug('validate login')
+    logging.debug('validate login' + username + password)
     return True
 
 
