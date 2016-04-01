@@ -60,5 +60,5 @@ def fill_db(iteration=1000):
 def user_list():
     return db_read(db_file_name, 100, 0)
 
-print(user_list())
+print(user_list()[0][0])
 
