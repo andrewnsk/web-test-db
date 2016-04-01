@@ -1,116 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Главная</title>
+{% include "head.html" ignore missing %}
 
-    <link rel="icon" href="/static/img/favicon.ico">
-
-        <!-- Bootstrap core CSS -->
-    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="/static/bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="/static/bootstrap/css/index.css" rel="stylesheet">
-
-
-
-</head>
 <body>
 
 <div class="container">
 
-<!---  Navbar   --->
-<div class="col-sm-12">
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">Andrew Dorokhin</a>
+{% include "navbar.html" ignore missing %}
+
+
+index page
+
+
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-</div>
-<!---  Navbar   --->
-
-<div class="col-sm-5 col-sm-offset-3">
-    <h3>Обратная связь</h3>
-    <form role="form" id="contactForm">
-        <div class="row">
-            <div class="form-group col-sm-6">
-                <label for="name" class="h4">Ваше имя</label>
-                <input type="text" class="form-control" id="name" placeholder="Введите имя" required>
-            </div>
-            <div class="form-group col-sm-6">
-                <label for="email" class="h4">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Введите email" required>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="message" class="h4 ">Сообщение</label>
-            <textarea id="message" class="form-control" rows="5" placeholder="Введите текст сообщения" required></textarea>
-        </div>
-        <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right ">Submit</button>
-<div id="msgSubmit" class="h3 text-center hidden">Отправлено</div>
-
-    </form>
-</div>
-
-</div>
-
-<script type="text/javascript" src="/static/js/jquery-2.2.2.min.js"></script>
-
-<script type="text/javascript" src="/static/js/form-scripts.js"></script>
-
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
 </body>
+
+{% include "footer.html" ignore missing %}
+
 </html>
