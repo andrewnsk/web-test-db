@@ -50,11 +50,11 @@ def local_time():
     return time
 
 
-def fill_db(iteration=1000):
+def fill_db(iteration=20):
     for hop in range(iteration):
         db_write(gen_mail(), gen_pass(), local_time(), 'none', 'false', gen_name())
 
-# fill_db()
+fill_db()
 
 
 def user_list():

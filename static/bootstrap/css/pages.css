@@ -7,9 +7,23 @@
     font-size: 12px;
 }
 .pagination-page-info b {
+
     color: black;
     background: #6aa6ed;
     padding-left: 2px;
     padding: .1em .25em;
     font-size: 150%;
 }
+
+
+
+ul {
+    margin: 0; /* Обнуляем значение отступов */
+    padding: 4px; /* Значение полей */
+   }
+ul li {
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 5px; /* Отступ слева */
+    border: 1px solid #000; /* Рамка вокруг текста */
+    padding: 3px; /* Поля вокруг текста */
+   }
